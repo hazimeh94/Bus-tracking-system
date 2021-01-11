@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Icons\bus.png" type="image/ico" sizes="16x16">
+    <title>Add Driver</title>
+    <style>
+    body {
+        background: url("Back/bg1blurred.jpg");
+        background-repeat: no-repeat;
+        background-size: 1000px 700px;
+        padding: 3% 0;
+        background-position: center;
+        font-family: 'Lato', sans-serif;
+    }
+
+    h1 {
+        color: #000099;
+    }
+
+    td {
+        color: #000099;
+
+    }
+
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=password],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit],
+    input[type=reset] {
+        background-color: #000099;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: black;
+    }
+
+    input[type=reset]:hover {
+        background-color: black;
+    }
+
+    .alert {
+        padding: 20px;
+        background-color: orange;
+        color: white;
+    }
+
+    .closeebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .closeebtn:hover {
+        color: black;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- alert username exist -->
+    <div class="alert">
+        <span class="closeebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Sorry !</strong> Username exists.
+    </div>
+    <!-- alert end -->
+    <h1>Add Bus</h1>
+    <form action="addBus_db.php" method="post">
+        <table>
+            <tr>
+                <td>
+                    <b>Driver Username :</b>
+                </td>
+                <td>
+                    <input type="text" name="driver_uname" size="70" maxlength="20" placeholder="Username" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Driver Password :</b>
+                </td>
+                <td>
+                    <input type="password" name="driver_psw" size="70" maxlength="20" placeholder="Password" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Bus No. :</b>
+                </td>
+                <td>
+                    <input type="text" name="Busno" size="70" maxlength="20" placeholder="Bus Number" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Driver Name :</b>
+                </td>
+                <td>
+                    <input type="text" name="driverName" size="70" maxlength="20" placeholder="Driver Name" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Phone Number :</b>
+                </td>
+                <td>
+                    <input type="text" name="phone" size="70" maxlength="20" placeholder="70000000" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" name="Clear" />
+                </td>
+                <td>
+                    <input type="submit" name="Next" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
